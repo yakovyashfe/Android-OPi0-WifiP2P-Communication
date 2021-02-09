@@ -1,4 +1,7 @@
-# Android-RasPi-WifiP2P-Communication
+# Android-OPi-WifiP2P-Communication
+I am trying to connect android to orange pi zero based on MrStashley/Android-RasPi-WifiP2P-Communication https://github.com/MrStashley/Android-RasPi-WifiP2P-Communication
+
+
 repo that contains a template/example of setting up a Wifi Direct connection between a Raspberry Pi Zero W and an android phone. Contains config scripts as well as (WIP) code for setting up a connection, setting up a TCP socket, and exchanging data on both the android and the pi
 
 links: 
