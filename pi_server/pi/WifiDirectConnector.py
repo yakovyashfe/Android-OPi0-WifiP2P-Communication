@@ -59,6 +59,7 @@ class WifiDirectConnector:
         #                 self.wifi_direct_connected();
                         
         #         print(data);
+        self.set_device_name("test")
         self.start_connect();
 
 
@@ -104,8 +105,8 @@ class WifiDirectConnector:
         self.device_name = "";
       
     def set_device_name(self, pdevice_name):
-        pdevice_name = str(pdevice_name)[2:-1];
-        print("Setting device name: " + str(pdevice_name));
+        # pdevice_name = str(pdevice_name)[2:-1];
+        print("Setting device name: " + pdevice_name);
         self.device_name = pdevice_name;
 
 
