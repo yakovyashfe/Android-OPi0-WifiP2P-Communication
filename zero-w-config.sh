@@ -20,9 +20,9 @@ echo "use control-c to stop execution if you need to"
 # sudo apt install emacs
 
 #deinstall classic networking
-apt --autoremove purge ifupdown dhcpcd5 isc-dhcp-client isc-dhcp-common rsyslog;
-apt-mark hold ifupdown dhcpcd5 isc-dhcp-client isc-dhcp-common rsyslog raspberrypi-net-mods openresolv;
-rm -r /etc/network /etc/dhcp;
+# apt --autoremove purge ifupdown dhcpcd5 isc-dhcp-client isc-dhcp-common rsyslog;
+# apt-mark hold ifupdown dhcpcd5 isc-dhcp-client isc-dhcp-common rsyslog raspberrypi-net-mods openresolv;
+# rm -r /etc/network /etc/dhcp;
 
 # setup/enable systemd-resolved and systemd-networkd
 apt --autoremove purge avahi-daemon
