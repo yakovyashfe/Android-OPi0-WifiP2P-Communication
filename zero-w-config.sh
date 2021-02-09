@@ -4,8 +4,8 @@
 # normal raspbian networking services, do not use this
 
 #vars, change them as necessary
-country="US"
-device_name="DIRECT-RasPi1"
+country="IL"
+device_name="DIRECT-OPi1"
 p2p_go_intent=15
 
 
@@ -15,9 +15,9 @@ echo "use control-c to stop execution if you need to"
 
 #install tools
 #these aren't necessary, you can get rid of these 3 lines if you want
-sudo apt install nmap
-sudo apt install screen
-sudo apt install emacs
+# sudo apt install nmap
+# sudo apt install screen
+# sudo apt install emacs
 
 #deinstall classic networking
 apt --autoremove purge ifupdown dhcpcd5 isc-dhcp-client isc-dhcp-common rsyslog;

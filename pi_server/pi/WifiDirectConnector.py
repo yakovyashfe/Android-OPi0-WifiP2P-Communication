@@ -27,38 +27,41 @@ class WifiDirectConnector:
         self.main();
 
     def main(self):
-        comPort = "/dev/ttyACM0"; #port that will be used if one is not specified (COM3 on windows)
-        baud = 9600; #default baudrate
-        if(len(sys.argv) > 1): #accept other com port and baudrate if one is given
-            comPort = sys.argv[1];
-            if(len(sys.argv) > 2):
-                baud = sys.argv[2];
+        # comPort = "/dev/ttyACM0"; #port that will be used if one is not specified (COM3 on windows)
+        # baud = 9600; #default baudrate
+        # if(len(sys.argv) > 1): #accept other com port and baudrate if one is given
+        #     comPort = sys.argv[1];
+        #     if(len(sys.argv) > 2):
+        #         baud = sys.argv[2];
                 
                 
-        serialConn = serial.Serial(comPort,baud, timeout=.1); #creates an object that watches the given port at the given baudrate
+        # serialConn = serial.Serial(comPort,baud, timeout=.1); #creates an object that watches the given port at the given baudrate
         
-        while True:
-            data = serialConn.readline()[:-2] #reads a line; the last byte is a newline character and we don't need it
-            if data:
-                if(data[0] == ord('_')):
-                    command_code = data[1];
-                    print("Command registered: " + chr(command_code));
-                    value = data[3:];
+        # while True:
+        #     data = serialConn.readline()[:-2] #reads a line; the last byte is a newline character and we don't need it
+        #     if data:
+        #         if(data[0] == ord('_')):
+        #             command_code = data[1];
+        #             print("Command registered: " + chr(command_code));
+        #             value = data[3:];
                     
-                    if(command_code == DEVICE_NAME):
-                        self.set_device_name(value);
-                    if(command_code == CENTRAL_CONNECTED):
-                        self.central_connected();
-                    if(command_code == CENTRAL_DISCONNECTED):
-                        self.central_disconnected();
-                    if(command_code == START_CONNECT):
-                        self.start_connect();
-                    if(command_code == DISCONNECT_WFD):
-                        self.disconnect();
-                    if(command_code == START_SOCKET):
-                        self.wifi_direct_connected();
+        #             if(command_code == DEVICE_NAME):
+        #                 self.set_device_name(value);
+        #             if(command_code == CENTRAL_CONNECTED):
+        #                 self.central_connected();
+        #             if(command_code == CENTRAL_DISCONNECTED):
+        #                 self.central_disconnected();
+        #             if(command_code == START_CONNECT):
+        #                 self.start_connect();
+        #             if(command_code == DISCONNECT_WFD):
+        #                 self.disconnect();
+        #             if(command_code == START_SOCKET):
+        #                 self.wifi_direct_connected();
                         
-                print(data);
+        #         print(data);
+        self.start_connect();
+
+
 
 
     def disconnect(self):
